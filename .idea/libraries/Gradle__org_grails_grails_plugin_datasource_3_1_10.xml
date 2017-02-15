@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.grails:grails-plugin-datasource:3.1.10">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-datasource/3.1.10/c1f18dcf312631d352c68d7f95875994fac6b394/grails-plugin-datasource-3.1.10.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails/grails-plugin-datasource/3.1.10/b10225ad50bcbdfb9b99e6803e91288aeaca205d/grails-plugin-datasource-3.1.10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

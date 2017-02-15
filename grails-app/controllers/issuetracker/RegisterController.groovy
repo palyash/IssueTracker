@@ -1,5 +1,4 @@
 package issuetracker
-
 class RegisterController {
     def springSecurityService
     def index() {

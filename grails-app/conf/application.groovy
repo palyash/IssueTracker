@@ -43,7 +43,7 @@ oauth{
 		facebook{
 			api= "org.scribe.builder.api.FacebookApi"
 			key= "218497378618893"
-			secret= "16ca66025c18179c53dad3e163f803e5"
+			secret="16ca66025c18179c53dad3e163f803e5"
 			successUri= "/login/facebookSuccess/"
 			failureUri= "/login/index/"
 			callback=  "http://localhost:8080/oauth/facebook/callback"
