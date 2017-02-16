@@ -4,6 +4,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails.plugins/oauth/3.0.1/c37dda81dde375bce0aa861bae9870c6a958edab/oauth-3.0.1.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.grails.plugins/oauth/3.0.1/eca8603232233c3153274ca02c9d277aae3d9550/oauth-3.0.1-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

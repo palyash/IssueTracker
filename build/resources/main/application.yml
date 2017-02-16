@@ -9,15 +9,16 @@ hibernate:
 dataSource:
     pooled: true
     jmxExport: true
-    driverClassName: org.h2.Driver
-    username: sa
-    password:
+    driverClassName: "com.mysql.jdbc.Driver"
+    dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    username: "root"
+    password: "root"
 
 environments:
     development:
         dataSource:
-            dbCreate: create-drop
-            url: jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+            dbCreate: "update"
+            url: 'jdbc:mysql://localhost:3306/Issue?useSSL=false'
     test:
         dataSource:
             dbCreate: update
@@ -56,7 +57,7 @@ grails:
             proxies: false
 info:
     app:
-        name: 'NewApp'
+        name: 'IssueTracker'
         version: '0.1'
         grailsVersion: '3.1.10'
 spring:

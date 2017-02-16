@@ -31,7 +31,7 @@ article{
   <header><h1>ISSUE TRACKER</h1></header>
 <div class="panel-body">
 <article>
-  <g:form controller= "Login" method="POST" id="loginForm" action="/login/authenticate" class="form-horizontal">
+  <g:form controller= "Issue" action="saveIssue" class="form-horizontal">
     <div class="form-group">
       <label class="control-label col-sm-2" id="username" for="username">Username</label>
       <div class="col-sm-10">
@@ -54,7 +54,7 @@ article{
 
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
-        <g:submitButton name="submit" id="submit" class="btn btn-primary" value="Login"/>
+        <g:submitButton name="submit" id="submit" class="btn btn-success" value="Login"/>
       </div>
     </div>
   

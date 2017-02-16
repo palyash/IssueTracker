@@ -31,36 +31,34 @@ article{
   <header><h1>ISSUE TRACKER</h1></header>
 <div class="panel-body">
 <article>
-  <g:form controller= "Login" method="POST" id="loginForm" action="/login/authenticate" class="form-horizontal">
+  <g:form controller= "Issue" action="saveIssue" class="form-horizontal">
     <div class="form-group">
-      <label class="control-label col-sm-2" id="username" for="username">Username</label>
+      <label class="control-label col-sm-2" for="title">Title:</label>
       <div class="col-sm-10">
-        <g:textField name="username" />
-	<!--<g:id="username" />-->
+        <g:textField name="title" />
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="pwd">password</label>
+      <label class="control-label col-sm-2" for="pwd">Description:</label>
       <div class="col-sm-10">
        <!-- <input type="text" class="form-control" id="title" placeholder="Enter Description">-->
-	<g:textfield name="password" />
-	<g:id="password" /><br>
-	<p id="remember_me_holder">
-		<input type="checkbox" class="chk" name="remember-me" id="remember_me" />
-		<label for="remember_me">Remember me</label>
-	</p>
+	<g:textArea name="description" />
       </div>
     </div>
-
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
-        <g:submitButton name="submit" id="submit" class="btn btn-primary" value="Login"/>
+        <g:submitButton name="addIssue" class="btn btn-success" value="Save"/>
       </div>
     </div>
-  
-<oauth:connect provider="facebook" id="facebook-connect-link"><button type="button" class="btn btn-primary">Login with Facebook</button></oauth:connect>
-</g:form>
-  </article>
+  </g:form>
+  <g:form controller= "Issue" action="listIssue" class="form-horizontal">
+     <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <g:submitButton name="showIssue" class="btn btn-info" value="List Issue"/>
+        </div>
+      </div>
+  </g:form>
+</article>
 </div>
 </div>
 
