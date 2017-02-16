@@ -31,35 +31,27 @@ article{
   <header><h1>ISSUE TRACKER</h1></header>
 <div class="panel-body">
 <article>
-  <g:form controller= "Login" method="POST" id="loginForm" action="/login/authenticate" class="form-horizontal">
-    <div class="form-group">
-      <label class="control-label col-sm-2" id="username" for="username">Username</label>
-      <div class="col-sm-10">
-        <g:textField name="username" />
-	<!--<g:id="username" />-->
-      </div>
-    </div>
-    <div class="form-group">
-      <label class="control-label col-sm-2" for="pwd">password</label>
-      <div class="col-sm-10">
-       <!-- <input type="text" class="form-control" id="title" placeholder="Enter Description">-->
-	<g:textfield name="password" />
-	<g:id="password" /><br>
-	<p id="remember_me_holder">
-		<input type="checkbox" class="chk" name="remember-me" id="remember_me" />
-		<label for="remember_me">Remember me</label>
-	</p>
-      </div>
-    </div>
+<form action="${postUrl ?: '/login/authenticate'}" method="POST" id="loginForm" class="cssform" autocomplete="off">
+			<p>
+				<label for="username"><g:message code='springSecurity.login.username.label'/>:</label>
+				<input type="text" class="text_" name="${usernameParameter ?: 'username'}" id="username"/>
+			</p>
 
-    <div class="form-group">
-      <div class="col-sm-offset-2 col-sm-10">
-        <g:submitButton name="submit" id="submit" class="btn btn-primary" value="Login"/>
-      </div>
-    </div>
-  
+			<p>
+				<label for="password"><g:message code='springSecurity.login.password.label'/>:</label>
+				<input type="password" class="text_" name="${passwordParameter ?: 'password'}" id="password"/>
+			</p>
+
+			<p id="remember_me_holder">
+				<input type="checkbox" class="chk" name="${rememberMeParameter ?: 'remember-me'}" id="remember_me" <g:if test='${hasCookie}'>checked="checked"</g:if>/>
+				<label for="remember_me"><g:message code='springSecurity.login.remember.me.label'/></label>
+			</p>
+
+			<p>
+				<input type="submit" id="submit" value="${message(code: 'springSecurity.login.button')}"/>
+			</p>
+</form>
 <oauth:connect provider="facebook" id="facebook-connect-link"><button type="button" class="btn btn-primary">Login with Facebook</button></oauth:connect>
-</g:form>
   </article>
 </div>
 </div>

@@ -10,7 +10,7 @@ class LoginController {
     }
     def facebookSuccess(){
 
-        String sessionKey = oauthService.findSessionKeyForAccessToken('twitter')
+        String sessionKey = oauthService.findSessionKeyForAccessToken('facebook')
         def seccionKey = session[sessionKey]
         def fbData = facebookLoginService.serviceMethod(sessionKey)
         def finalData = JSON.parse(fbData)
